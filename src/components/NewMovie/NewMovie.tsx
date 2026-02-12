@@ -28,10 +28,10 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
     setIsSubmitted(true);
 
     const isFormValid =
-      title.trim() &&
-      imgUrl.trim() &&
-      imdbUrl.trim() &&
-      imdbId.trim() &&
+      title.trim().length > 0 &&
+      imgUrl.trim().length > 0 &&
+      imdbUrl.trim().length > 0 &&
+      imdbId.trim().length > 0 &&
       isValidUrl(imgUrl) &&
       isValidUrl(imdbUrl);
 
